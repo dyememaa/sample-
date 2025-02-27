@@ -2,7 +2,7 @@ document.getElementById("button").addEventListener('click',()=>{
     let inputValue = document.getElementById('inputName').value 
     let details = document.getElementById("details")
     details.innerHTML = ""
-    fetch(`www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata=${inputValue}`)
+    fetch(`www.themealdb.com/api/json/v1/1/latest.php=${inputValue}`)
         .then(response => response.json())
         .then(data=> {
             const items = document.getElementById("items")
